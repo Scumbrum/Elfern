@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.game-elfern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.board {
+    background: rgb(10, 121, 29);
+    width: 95vw;
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+}
+.game-elfern {
+    padding-top: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vseparator {
+    display: block;
+    width: .2vmin;
+    
+    background-color: white;
+}
+.hseparator{
+    display: block;
+    height: .4vmin;
+    width: 20%;
+    background-color: white;
+    align-self: center;
+}
+
+.controll {
+    display: flex;
+}
+.center {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.circle {
+    width: calc(95vw * 0.2);
+    height: calc(95vw * 0.2);
+    grid-row: 2/3;
+    border-radius: 100%;
+    border: .4vmin solid white;
+    align-self: center;
+    box-sizing: border-box;
+}
+.deck-place {
+    background: rgb(10, 121, 29);;
+    padding-top: 5vh;
+    width: 20vw;
+    border: .4vmin solid white;
+    grid-row: 3/3;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.cards img {
+    width: 20vmin;
+    height: 28vmin;
+}
+.circle ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    transition-property: transform, opacity;
+    transition-delay: 0s, .5s;
+    transition-duration: .5s, .4s;
+}
+.circle img {
+    width: 20vmin;
+    height: 28vmin;
+}
+.cards {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.cards li {
+    margin-top: calc(-26vmin);
+    transition-property: transform, opacity;
+    transition-delay: 0s, .5s;
+    transition-duration: .5s, .4s;
+}
+.cards li:first-child {
+    margin-top: 5vh;
+}
+.hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.deck li {
+    margin: calc(-21vmin - 4.5px) 0 0 0;
+    transition-property: transform, opacity;
+    transition-delay: 0s, .5s;
+    transition-duration: .5s, .4s;
+}
+.deck img {
+    transform: rotate(90deg);
+    width: 15vmin;
+    height: 21vmin;
+}
+.deck li:first-child{
+    margin: 0;
+}
+.deck {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    transition-duration: 1s;
+}
+.deck-place h1 {
+    
+    display: flex;
+    justify-content: center;
+    font-size: 8vmin;
+}
+.deck-place.active .deck {
+    transform: translate(0,-45vh);
+}
+.deck-place.active {
+    height: 0;
+}
+
+.deck-place.active h1 {
+    display: none;
+}
+.move0 {
+    transform: translate(-38vw,0);
+    opacity: 0;
+}
+.move1 {
+    transform: translate(38vw,0);
+    opacity: 0;
+}
+.hide {
+    display: none;
+}
+.hide:first-child {
+    display: inline-block;
+}
+.gamer .put {
+    transform: translate(38vw,0);
+    opacity: 0;
+}
+.opponent .put {
+    transform: translate(-38vw,0);
+    opacity: 0;
+}
+.give0 {
+    transform: translate(-38vw,0);
+    opacity: 0;
+}
+.give1 {
+    transform: translate(38vw,0);
+    opacity: 0;
+}
+.action {
+    background: rgb(10, 121, 29);
+    padding: 6vmin;
+    font-size: 6vmin;
+    border-radius: 20% 20% 0 0;
+}
+.start {
+    align-self: flex-start;
+    padding: 4vmin;
+    background: rgb(10, 121, 29);
+    color: yellow;
+    border: none;
+    border-radius: 20%;
+    margin-bottom: 5vmin;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.controll .hidden {
+    display: none;
+}
